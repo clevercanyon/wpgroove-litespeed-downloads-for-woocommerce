@@ -1,0 +1,17 @@
+{
+	"name": "clevercanyon/wpgroove-litespeed-downloads-for-woocommerce.trunk",
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+	"config": {
+		"process-timeout": 0,
+		"optimize-autoloader": true
+	},
+	"require": {
+		"clevercanyon/wpgroove-framework": "dev-main"
+	},
+	"autoload": {
+		"psr-4": {
+			"WP_Groove\\LiteSpeed_Downloads_For_WooCommerce\\": "./src/classes"
+		}
+	}
+}
