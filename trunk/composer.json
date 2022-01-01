@@ -3,6 +3,7 @@
 	"prefer-stable"     : true,
 	"minimum-stability" : "dev",
 	"config"            : {
+		"prepend-autoloader" : false
 	},
 	"require"           : {
 		"clevercanyon/wpgroove-framework" : "dev-main"

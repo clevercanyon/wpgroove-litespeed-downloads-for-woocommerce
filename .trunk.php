@@ -50,6 +50,9 @@ if ( ! getenv( 'COMPOSER_DEV_MODE' ) ) {
  * Trunk autoloader.
  *
  * @since 2021-12-15
+ *
+ * @note  Very important to have `@prepend-autoloader: false` in `trunk/composer.json`.
+ *        Reason is because otherwise it will have precedence over local development symlinks.
  */
 if ( is_file( __DIR__ . '/trunk/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/trunk/vendor/autoload.php';

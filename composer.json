@@ -24,7 +24,7 @@
 	},
 	"extra"             : {
 		"clevercanyon" : {
-			"@extends-packages" : [ "clevercanyon/wpgroove-framework-dev" ]
+			"$extends-packages" : [ "clevercanyon/wpgroove-framework-dev" ]
 		}
 	}
 }
