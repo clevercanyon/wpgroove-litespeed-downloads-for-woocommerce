@@ -269,12 +269,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/php-js-utilities.git",
-                "reference": "e0bae4de20d19e1bb0834bfbea29bf11d53c1161"
+                "reference": "ffa3f11c82c4f548b02568ed3b72b5a57c6a6a91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/e0bae4de20d19e1bb0834bfbea29bf11d53c1161",
-                "reference": "e0bae4de20d19e1bb0834bfbea29bf11d53c1161",
+                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/ffa3f11c82c4f548b02568ed3b72b5a57c6a6a91",
+                "reference": "ffa3f11c82c4f548b02568ed3b72b5a57c6a6a91",
                 "shasum": ""
             },
             "require": {
@@ -318,7 +318,7 @@
                 "issues": "https://github.com/clevercanyon/php-js-utilities/issues",
                 "source": "https://github.com/clevercanyon/php-js-utilities/tree/main"
             },
-            "time": "2022-01-02T16:06:13+00:00"
+            "time": "2022-01-03T04:35:06+00:00"
         },
         {
             "name": "clevercanyon/php-js-utilities-dev",
@@ -326,12 +326,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/php-js-utilities-dev.git",
-                "reference": "efeed8ed41b0584e8cd396c9102811957be770c5"
+                "reference": "9d74eeab2966eb31283a22d7d68d2766154f7f03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities-dev/zipball/efeed8ed41b0584e8cd396c9102811957be770c5",
-                "reference": "efeed8ed41b0584e8cd396c9102811957be770c5",
+                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities-dev/zipball/9d74eeab2966eb31283a22d7d68d2766154f7f03",
+                "reference": "9d74eeab2966eb31283a22d7d68d2766154f7f03",
                 "shasum": ""
             },
             "require": {
@@ -343,7 +343,10 @@
                 "ext-mbstring": "*",
                 "ext-zip": "*",
                 "humbug/php-scoper": "dev-master",
-                "php": "^7.4 || ^8.0 || ^8.1",
+                "nikic/php-parser": "^4.13",
+                "php": "^8.0 || ^8.1",
+                "php-stubs/woocommerce-stubs": "dev-master",
+                "php-stubs/wordpress-globals": "dev-master",
                 "phpunit/phpunit": "^9.5"
             },
             "default-branch": true,
@@ -400,7 +403,7 @@
                 "issues": "https://github.com/clevercanyon/php-js-utilities-dev/issues",
                 "source": "https://github.com/clevercanyon/php-js-utilities-dev/tree/main"
             },
-            "time": "2022-01-02T16:32:11+00:00"
+            "time": "2022-01-03T04:34:45+00:00"
         },
         {
             "name": "clevercanyon/php-js-utilities-dev-npm",
@@ -457,12 +460,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework.git",
-                "reference": "bb6f3ce7b22ca5843b98bb67473cfd092c0bbc66"
+                "reference": "f69f1249fbe6ccc626fd25d4869b712a74ef5dba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/bb6f3ce7b22ca5843b98bb67473cfd092c0bbc66",
-                "reference": "bb6f3ce7b22ca5843b98bb67473cfd092c0bbc66",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/f69f1249fbe6ccc626fd25d4869b712a74ef5dba",
+                "reference": "f69f1249fbe6ccc626fd25d4869b712a74ef5dba",
                 "shasum": ""
             },
             "require": {
@@ -501,7 +504,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework/tree/main"
             },
-            "time": "2022-01-02T14:17:30+00:00"
+            "time": "2022-01-03T04:36:09+00:00"
         },
         {
             "name": "clevercanyon/wpgroove-framework-dev",
@@ -509,12 +512,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework-dev.git",
-                "reference": "288972fe0f1547ef0b2be0dbc53512606c38289f"
+                "reference": "e3e735acc6c3d2b1bfcd9902014026df060f8239"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework-dev/zipball/288972fe0f1547ef0b2be0dbc53512606c38289f",
-                "reference": "288972fe0f1547ef0b2be0dbc53512606c38289f",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework-dev/zipball/e3e735acc6c3d2b1bfcd9902014026df060f8239",
+                "reference": "e3e735acc6c3d2b1bfcd9902014026df060f8239",
                 "shasum": ""
             },
             "require": {
@@ -575,7 +578,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework-dev/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework-dev/tree/main"
             },
-            "time": "2022-01-02T14:17:46+00:00"
+            "time": "2022-01-03T04:36:27+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
@@ -1595,6 +1598,137 @@
                 "source": "https://github.com/phar-io/version/tree/3.1.0"
             },
             "time": "2021-02-23T14:00:09+00:00"
+        },
+        {
+            "name": "php-stubs/woocommerce-stubs",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-stubs/woocommerce-stubs.git",
+                "reference": "a7204cfbb5fa90720773122cb68530087de5bc78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-stubs/woocommerce-stubs/zipball/a7204cfbb5fa90720773122cb68530087de5bc78",
+                "reference": "a7204cfbb5fa90720773122cb68530087de5bc78",
+                "shasum": ""
+            },
+            "require": {
+                "php-stubs/wordpress-stubs": "^5.3.0"
+            },
+            "require-dev": {
+                "giacocorsiglia/stubs-generator": "^0.5.0",
+                "php": "~7.1"
+            },
+            "suggest": {
+                "symfony/polyfill-php73": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+            },
+            "default-branch": true,
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "WooCommerce function and class declaration stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/woocommerce-stubs",
+            "keywords": [
+                "PHPStan",
+                "static analysis",
+                "woocommerce",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/php-stubs/woocommerce-stubs/issues",
+                "source": "https://github.com/php-stubs/woocommerce-stubs/tree/v5.9.0"
+            },
+            "time": "2021-11-05T10:02:27+00:00"
+        },
+        {
+            "name": "php-stubs/wordpress-globals",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-stubs/wordpress-globals.git",
+                "reference": "748a1fb2ae8fda94844bd0545935095dbf404b32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-globals/zipball/748a1fb2ae8fda94844bd0545935095dbf404b32",
+                "reference": "748a1fb2ae8fda94844bd0545935095dbf404b32",
+                "shasum": ""
+            },
+            "require-dev": {
+                "php": "~7.1"
+            },
+            "suggest": {
+                "php-stubs/wordpress-stubs": "Up-to-date WordPress function and class declaration stubs",
+                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+            },
+            "default-branch": true,
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Global variables and global constants from WordPress core.",
+            "homepage": "https://github.com/php-stubs/wordpress-globals",
+            "keywords": [
+                "PHPStan",
+                "constants",
+                "globals",
+                "static analysis",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/php-stubs/wordpress-globals/issues",
+                "source": "https://github.com/php-stubs/wordpress-globals/tree/v0.2.0"
+            },
+            "time": "2020-01-13T06:12:59+00:00"
+        },
+        {
+            "name": "php-stubs/wordpress-stubs",
+            "version": "v5.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-stubs/wordpress-stubs.git",
+                "reference": "67fd773742b7be5b4463f40318b0b4890a07033b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/67fd773742b7be5b4463f40318b0b4890a07033b",
+                "reference": "67fd773742b7be5b4463f40318b0b4890a07033b",
+                "shasum": ""
+            },
+            "replace": {
+                "giacocorsiglia/wordpress-stubs": "*"
+            },
+            "require-dev": {
+                "giacocorsiglia/stubs-generator": "^0.5.0",
+                "php": "~7.1"
+            },
+            "suggest": {
+                "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
+                "symfony/polyfill-php73": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "WordPress function and class declaration stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/wordpress-stubs",
+            "keywords": [
+                "PHPStan",
+                "static analysis",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
+                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v5.8.2"
+            },
+            "time": "2021-11-11T13:57:00+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
