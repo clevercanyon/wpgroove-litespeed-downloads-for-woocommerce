@@ -127,12 +127,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework.git",
-                "reference": "f69f1249fbe6ccc626fd25d4869b712a74ef5dba"
+                "reference": "92290098bf9730cd34646fa5d2cf213cb6394517"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/f69f1249fbe6ccc626fd25d4869b712a74ef5dba",
-                "reference": "f69f1249fbe6ccc626fd25d4869b712a74ef5dba",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/92290098bf9730cd34646fa5d2cf213cb6394517",
+                "reference": "92290098bf9730cd34646fa5d2cf213cb6394517",
                 "shasum": ""
             },
             "require": {
@@ -171,7 +171,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework/tree/main"
             },
-            "time": "2022-01-03T04:36:09+00:00"
+            "time": "2022-01-03T04:48:18+00:00"
         },
         {
             "name": "ulrichsg/getopt-php",
