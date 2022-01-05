@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b033de08f4ceecc73e5538b3518ae5f3",
+    "content-hash": "255515ffa95ee6442c59904d76662c62",
     "packages": [],
     "packages-dev": [
         {
@@ -243,12 +243,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/php-js-utilities.git",
-                "reference": "88b0ff60080ba510ab968a34177416f1d63448af"
+                "reference": "1868f6b182e8d3c4a31f36f41ac5147120249692"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/88b0ff60080ba510ab968a34177416f1d63448af",
-                "reference": "88b0ff60080ba510ab968a34177416f1d63448af",
+                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/1868f6b182e8d3c4a31f36f41ac5147120249692",
+                "reference": "1868f6b182e8d3c4a31f36f41ac5147120249692",
                 "shasum": ""
             },
             "require": {
@@ -278,6 +278,13 @@
                                     "bucket": "clevercanyon",
                                     "cdn_domain": "cdn.clevercanyon.com"
                                 }
+                            }
+                        },
+                        "scoper": {
+                            "cfg": {
+                                "exclude-constants": [],
+                                "exclude-classes": [],
+                                "exclude-functions": []
                             }
                         },
                         "post_update_cmd_handler": {
@@ -318,7 +325,7 @@
                 "issues": "https://github.com/clevercanyon/php-js-utilities/issues",
                 "source": "https://github.com/clevercanyon/php-js-utilities/tree/main"
             },
-            "time": "2022-01-05T01:34:00+00:00"
+            "time": "2022-01-05T04:36:05+00:00"
         },
         {
             "name": "clevercanyon/php-js-utilities-dev",
@@ -406,12 +413,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework.git",
-                "reference": "7e8911dffa93729727490c16c7f99a9da4f5ef01"
+                "reference": "1c83967e46b56bf74df68c09b9514f2fff407699"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/7e8911dffa93729727490c16c7f99a9da4f5ef01",
-                "reference": "7e8911dffa93729727490c16c7f99a9da4f5ef01",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/1c83967e46b56bf74df68c09b9514f2fff407699",
+                "reference": "1c83967e46b56bf74df68c09b9514f2fff407699",
                 "shasum": ""
             },
             "require": {
@@ -437,6 +444,13 @@
                                     "bucket": "wpgroove",
                                     "cdn_domain": "cdn.wpgroove.com"
                                 }
+                            }
+                        },
+                        "scoper": {
+                            "cfg": {
+                                "exclude-constants": [],
+                                "exclude-classes": [],
+                                "exclude-functions": []
                             }
                         },
                         "post_update_cmd_handler": {
@@ -473,7 +487,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework/tree/main"
             },
-            "time": "2022-01-05T01:34:36+00:00"
+            "time": "2022-01-05T04:37:52+00:00"
         },
         {
             "name": "clevercanyon/wpgroove-framework-dev",

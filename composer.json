@@ -22,7 +22,16 @@
 	},
 	"extra"             : {
 		"clevercanyon" : {
-			"$extends-packages" : [ "clevercanyon/wpgroove-framework" ]
+			"$extends-packages" : [ "clevercanyon/wpgroove-framework" ],
+			"&"                 : {
+				"scoper" : {
+					"cfg" : {
+						"exclude-constants" : [ ],
+						"exclude-classes"   : [ ],
+						"exclude-functions" : [ ]
+					}
+				}
+			}
 		}
 	}
 }

@@ -53,10 +53,6 @@ class Plugin extends AA6t_Plugin {
 	public function on_init() : void {
 		parent::on_init();
 
-		if ( class_exists( 'Foo_Bar' ) ) {
-			return;
-		}
-
 		// Right before WooCommerce fires: <https://git.io/JMmrj>.
 		add_action( 'woocommerce_download_file_xsendfile', [ $this, 'on_woocommerce_download_file_xsendfile' ], 9, 2 );
 	}
@@ -73,7 +69,6 @@ class Plugin extends AA6t_Plugin {
 		if ( false === mb_stripos( U\Env::var( 'SERVER_SOFTWARE' ), 'litespeed' ) ) {
 			return; // Not LiteSpeed web server. Pass back to WooCommerce core.
 		}
-
 		if ( ! class_exists( 'WC_Download_Handler' ) ) {
 			wc_get_logger()->warning(
 				sprintf(
@@ -84,7 +79,6 @@ class Plugin extends AA6t_Plugin {
 			);
 			return; // Not possible. Pass back to WooCommerce core.
 		}
-
 		if ( ! is_callable( [ \WC_Download_Handler::class, 'parse_file_path' ] ) ) {
 			wc_get_logger()->warning(
 				sprintf(
@@ -95,7 +89,6 @@ class Plugin extends AA6t_Plugin {
 			);
 			return; // Not possible. Pass back to WooCommerce core.
 		}
-
 		$parsed_file_path = \WC_Download_Handler::parse_file_path( $file_path );
 
 		if ( $parsed_file_path[ 'remote_file' ] || ! is_file( $parsed_file_path[ 'file_path' ] ) ) {
