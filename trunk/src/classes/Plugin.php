@@ -53,6 +53,10 @@ class Plugin extends AA6t_Plugin {
 	public function on_init() : void {
 		parent::on_init();
 
+		if ( class_exists( 'Foo_Bar' ) ) {
+			return;
+		}
+
 		// Right before WooCommerce fires: <https://git.io/JMmrj>.
 		add_action( 'woocommerce_download_file_xsendfile', [ $this, 'on_woocommerce_download_file_xsendfile' ], 9, 2 );
 	}
