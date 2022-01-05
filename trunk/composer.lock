@@ -60,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/php-js-utilities.git",
-                "reference": "1868f6b182e8d3c4a31f36f41ac5147120249692"
+                "reference": "6c60bddff56a7b7aef586671d6bd9e268e0261a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/1868f6b182e8d3c4a31f36f41ac5147120249692",
-                "reference": "1868f6b182e8d3c4a31f36f41ac5147120249692",
+                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/6c60bddff56a7b7aef586671d6bd9e268e0261a3",
+                "reference": "6c60bddff56a7b7aef586671d6bd9e268e0261a3",
                 "shasum": ""
             },
             "require": {
@@ -142,7 +142,7 @@
                 "issues": "https://github.com/clevercanyon/php-js-utilities/issues",
                 "source": "https://github.com/clevercanyon/php-js-utilities/tree/main"
             },
-            "time": "2022-01-05T04:36:05+00:00"
+            "time": "2022-01-05T04:42:01+00:00"
         },
         {
             "name": "clevercanyon/wpgroove-framework",
