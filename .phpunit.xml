@@ -24,6 +24,7 @@
 	beStrictAboutTestsThatDoNotTestAnything="true"
 	beStrictAboutResourceUsageDuringSmallTests="true"
 
+	defaultTestSuite="tests"
 	bootstrap="./vendor/autoload.php"
 	cacheResultFile="._x/phpunit/result.cache"
 

@@ -42,6 +42,7 @@ Example `index.scss` starter file contents:
 @tailwind utilities;
 ------------------------------------------------------------------------------------------------- @formatter:/ignore */
 
+const fs   = require( 'fs' );
 const path = require( 'path' );
 const mc   = require( '@clevercanyon/js-object-mc' );
 
@@ -61,7 +62,9 @@ module.exports = ( () => {
 					serif : [ 'Georgia', 'serif' ],
 				},
 			},
-			content : [ './src/{**/*,**/.*,.*,*}.{md,xml,htm,html,php,jsx,js,cjs,tsx,ts,cts}' ],
+			content : fs.existsSync( './trunk' )
+				? [ './trunk/src/{**/*,**/.*,.*,*}.{md,xml,htm,html,php,jsx,js,cjs,tsx,ts,cts}' ]
+				: [ './src/{**/*,**/.*,.*,*}.{md,xml,htm,html,php,jsx,js,cjs,tsx,ts,cts}' ],
 		},
 		file[ 'composer.json' ]?.extra?.clevercanyon?.[ '&' ]?.tailwind || {},
 		file[ 'package.json' ]?.config?.clevercanyon?.[ '&' ]?.tailwind || {},
