@@ -43,7 +43,7 @@ use WP_Groove\Framework\Utilities\OOP\Abstracts\{AA6t_App};
  * Dev-only access.
  */
 if ( ! getenv( 'COMPOSER_DEV_MODE' ) ) {
-	exit( 'Dev mode only.' );
+	exit( 1 ); // Dev mode only.
 }
 
 /**

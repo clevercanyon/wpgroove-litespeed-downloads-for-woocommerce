@@ -17,7 +17,7 @@
 		"WP_Groove\\LiteSpeed_Downloads_For_WooCommerce__Tests\\" : "./tests/classes"
 	},
 	"scripts"           : {
-		"post-update-cmd" : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/toolchain/composer/post-update-cmd.php",
+		"post-update-cmd" : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/toolchain/composer/on-post-update-cmd",
 		"phpunit"         : "composer exec -- phpunit --configuration ./.phpunit.xml",
 		"webpack"         : "npx webpack --config ./.webpack.cjs"
 	},
@@ -25,7 +25,7 @@
 		"clevercanyon" : {
 			"$extends-packages" : [ "clevercanyon/wpgroove-framework" ],
 			"&"                 : {
-				"scoper" : {
+				"php_scoper" : {
 					"cfg" : {
 						"exclude-constants" : [ ],
 						"exclude-classes"   : [ ],
