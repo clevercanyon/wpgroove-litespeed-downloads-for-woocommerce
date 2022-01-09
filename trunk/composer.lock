@@ -60,26 +60,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/php-js-utilities.git",
-                "reference": "354fbd6ff4e7a5781a0d16ab9d25a3f122ffab0b"
+                "reference": "a52f2ae0877e440c248a2e557c07afa601336fff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/354fbd6ff4e7a5781a0d16ab9d25a3f122ffab0b",
-                "reference": "354fbd6ff4e7a5781a0d16ab9d25a3f122ffab0b",
+                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/a52f2ae0877e440c248a2e557c07afa601336fff",
+                "reference": "a52f2ae0877e440c248a2e557c07afa601336fff",
                 "shasum": ""
             },
             "require": {
                 "clevercanyon/php-chalk": "dev-main",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php-64bit": "^7.4 || ^8.0 || ^8.1",
-                "ulrichsg/getopt-php": "^4.0"
+                "php-64bit": "^7.4 || ^8.0 || ^8.1"
             },
             "require-dev": {
                 "clevercanyon/php-js-utilities-dev": "dev-main"
             },
             "suggest": {
-                "ext-zip": "*"
+                "ext-zip": "*",
+                "ulrichsg/getopt-php": "^4.0"
             },
             "default-branch": true,
             "bin": [
@@ -146,7 +146,7 @@
                 "issues": "https://github.com/clevercanyon/php-js-utilities/issues",
                 "source": "https://github.com/clevercanyon/php-js-utilities/tree/main"
             },
-            "time": "2022-01-09T06:59:31+00:00"
+            "time": "2022-01-09T17:35:29+00:00"
         },
         {
             "name": "clevercanyon/wpgroove-framework",
@@ -154,12 +154,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework.git",
-                "reference": "07b89057efdf2f3994adde1e0ab2b1406e6af9d5"
+                "reference": "a0d3ac0ba97c4800b6a942e076b28487c1489e4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/07b89057efdf2f3994adde1e0ab2b1406e6af9d5",
-                "reference": "07b89057efdf2f3994adde1e0ab2b1406e6af9d5",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/a0d3ac0ba97c4800b6a942e076b28487c1489e4b",
+                "reference": "a0d3ac0ba97c4800b6a942e076b28487c1489e4b",
                 "shasum": ""
             },
             "require": {
@@ -231,57 +231,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework/tree/main"
             },
-            "time": "2022-01-09T06:59:47+00:00"
-        },
-        {
-            "name": "ulrichsg/getopt-php",
-            "version": "v4.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/getopt-php/getopt-php.git",
-                "reference": "ad9e8cdf1b709caf84ca545ff90bcc7298f0fa5a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/getopt-php/getopt-php/zipball/ad9e8cdf1b709caf84ca545ff90bcc7298f0fa5a",
-                "reference": "ad9e8cdf1b709caf84ca545ff90bcc7298f0fa5a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">=7.1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.5.20",
-                "squizlabs/php_codesniffer": "^3.5.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GetOpt\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ulrich Schmidt-Goertz",
-                    "email": "ulrich@schmidt-goertz.de"
-                },
-                {
-                    "name": "Thomas Flori",
-                    "email": "thflori@gmail.com"
-                }
-            ],
-            "description": "Command line arguments parser for PHP 7.1 and above",
-            "homepage": "http://getopt-php.github.io/getopt-php",
-            "support": {
-                "issues": "https://github.com/getopt-php/getopt-php/issues",
-                "source": "https://github.com/getopt-php/getopt-php/tree/v4.0.1"
-            },
-            "time": "2022-01-04T11:01:04+00:00"
+            "time": "2022-01-09T17:36:17+00:00"
         }
     ],
     "packages-dev": [],
