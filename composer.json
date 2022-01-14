@@ -25,6 +25,14 @@
 		"clevercanyon" : {
 			"$extends-packages" : [ "clevercanyon/wpgroove-framework" ],
 			"&"                 : {
+				"project"    : {
+					"data" : {
+						"version"    : "1.0.0",
+						"stable_tag" : "1.0.0",
+						"layout"     : "wp-plugin",
+						"name"       : "LiteSpeed Downloads for WooCommerce"
+					}
+				},
 				"php_scoper" : {
 					"cfg" : {
 						"exclude-constants" : [ ],

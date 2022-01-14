@@ -33,7 +33,7 @@ use Clever_Canyon\Utilities\OOP\Interfaces\{I7e_Base, I7e_Offsets, I7e_Generic, 
  *
  * @since 2021-12-15
  */
-use WP_Groove\Framework\Utilities\{STC as UU};
+use WP_Groove\Framework\Utilities\{STC as W};
 use WP_Groove\Framework\Plugin\Abstracts\{AA6t_Plugin};
 use WP_Groove\Framework\Utilities\OOP\Abstracts\{AA6t_App};
 
@@ -144,7 +144,7 @@ class Plugin extends AA6t_Plugin {
 		U\Env::prep_for_file_download();
 
 		header( 'Content-Description: File Transfer' );
-		header( 'Content-Type: ' . UU\File::mime_type( $file_path, 'application/force-download' ) );
+		header( 'Content-Type: ' . W\File::mime_type( $file_path, 'application/force-download' ) );
 		header( 'Content-Disposition: attachment; filename="' . str_replace( '"', '', $file_name ) . '";' );
 
 		if ( $file_size = filesize( $file_path ) ) {
