@@ -15,7 +15,7 @@
  *
  * @since 2021-12-25
  */
-declare( strict_types = 1 ); // ｡･:*:･ﾟ★.
+declare( strict_types = 1 );
 namespace WP_Groove\LiteSpeed_Downloads_For_WooCommerce;
 
 /**
@@ -23,19 +23,21 @@ namespace WP_Groove\LiteSpeed_Downloads_For_WooCommerce;
  *
  * @since 2021-12-15
  */
-use Clever_Canyon\Utilities\{STC as U};
-use Clever_Canyon\Utilities\OOP\{Offsets, Generic, Error, Exception, Fatal_Exception};
-use Clever_Canyon\Utilities\OOP\Abstracts\{A6t_Base, A6t_Offsets, A6t_Generic, A6t_Error, A6t_Exception};
-use Clever_Canyon\Utilities\OOP\Interfaces\{I7e_Base, I7e_Offsets, I7e_Generic, I7e_Error, I7e_Exception};
+use Clever_Canyon\{Utilities as U};
 
 /**
- * WP Groove utilities.
+ * Framework.
  *
  * @since 2021-12-15
  */
-use WP_Groove\Framework\Utilities\{STC as W};
-use WP_Groove\Framework\Plugin\Abstracts\{AA6t_Plugin};
-use WP_Groove\Framework\Utilities\OOP\Abstracts\{AA6t_App};
+use WP_Groove\{Framework as WPG};
+
+/**
+ * Plugin.
+ *
+ * @since 2021-12-15
+ */
+use WP_Groove\{LiteSpeed_Downloads_For_WooCommerce as WP};
 
 // </editor-fold>
 
@@ -44,7 +46,7 @@ use WP_Groove\Framework\Utilities\OOP\Abstracts\{AA6t_App};
  *
  * @since 2021-12-15
  */
-class Plugin extends AA6t_Plugin {
+class Plugin extends WPG\A6t\Plugin {
 	/**
 	 * On `init` hook.
 	 *
@@ -144,7 +146,7 @@ class Plugin extends AA6t_Plugin {
 		U\Env::prep_for_file_download();
 
 		header( 'Content-Description: File Transfer' );
-		header( 'Content-Type: ' . W\File::mime_type( $file_path, 'application/force-download' ) );
+		header( 'Content-Type: ' . WPG\File::mime_type( $file_path, 'application/force-download' ) );
 		header( 'Content-Disposition: attachment; filename="' . str_replace( '"', '', $file_name ) . '";' );
 
 		if ( $file_size = filesize( $file_path ) ) {
