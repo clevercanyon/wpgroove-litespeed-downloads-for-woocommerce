@@ -96,7 +96,7 @@ class Plugin extends WPG\A6t\Plugin {
 		if ( $parsed_file_path[ 'remote_file' ] || ! is_file( $parsed_file_path[ 'file_path' ] ) ) {
 			return; // Not possible. Pass back to WooCommerce core.
 		}
-		$file_path = U\Fs::normalize( realpath( $parsed_file_path[ 'file_path' ] ) );
+		$file_path = U\Fs::realize( $parsed_file_path[ 'file_path' ] );
 
 		wc_get_logger()->debug(
 			sprintf(
@@ -120,8 +120,8 @@ class Plugin extends WPG\A6t\Plugin {
 	protected function do_litespeed_download( string $file_path, string $file_name, array $parsed_file_path ) /* : never */ : void {
 		$this->prep_file_download( $file_path, $file_name );
 
-		$file_path             = U\Fs::normalize( realpath( $file_path ) );
-		$x_litespeed_base_path = U\Fs::normalize( realpath( U\Env::var( 'DOCUMENT_ROOT' ) ) );
+		$file_path             = U\Fs::realize( $file_path );
+		$x_litespeed_base_path = U\Fs::realize( U\Env::var( 'DOCUMENT_ROOT' ) );
 		$x_litespeed_location  = '/' . U\Dir::subpath( $x_litespeed_base_path, $file_path );
 		$x_litespeed_location  = apply_filters(
 			$this->var_prefix . 'download_file_x_litespeed_location',
