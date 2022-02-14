@@ -73,7 +73,7 @@ use WP_Groove\{LiteSpeed_Downloads_For_WooCommerce as WP};
  * @since 2021-12-15
  */
 if ( ! defined( 'WPINC' ) ) {
-	exit( 'No direct access.' );
+	return; // No direct access.
 }
 
 /**
