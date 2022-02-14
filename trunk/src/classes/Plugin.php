@@ -68,7 +68,7 @@ class Plugin extends WPG\A6t\Plugin {
 	 * @param string $file_name File name.
 	 */
 	public function on_woocommerce_download_file_xsendfile( string $file_path, string $file_name ) : void {
-		if ( false === mb_stripos( U\Env::var( 'SERVER_SOFTWARE' ), 'litespeed' ) ) {
+		if ( ! U\Env::is_litespeed() ) {
 			return; // Not LiteSpeed web server. Pass back to WooCommerce core.
 		}
 		if ( ! class_exists( 'WC_Download_Handler' ) ) {
@@ -121,10 +121,11 @@ class Plugin extends WPG\A6t\Plugin {
 		$this->prep_file_download( $file_path, $file_name );
 
 		$file_path             = U\Fs::realize( $file_path );
-		$x_litespeed_base_path = U\Fs::realize( U\Env::var( 'DOCUMENT_ROOT' ) );
-		$x_litespeed_location  = '/' . U\Dir::subpath( $x_litespeed_base_path, $file_path );
-		$x_litespeed_location  = apply_filters(
-			$this->var_prefix . 'download_file_x_litespeed_location',
+		$x_litespeed_base_path = U\Fs::realize( U\Env::var( 'DOCUMENT_ROOT' ) ?: ABSPATH );
+
+		$x_litespeed_location = '/' . U\Dir::subpath( $x_litespeed_base_path, $file_path );
+		$x_litespeed_location = $this->apply_filters(
+			'download_file_x_litespeed_location',
 			$x_litespeed_location,
 			$file_path,
 			$file_name,
@@ -143,14 +144,14 @@ class Plugin extends WPG\A6t\Plugin {
 	 * @param string $file_name File name.
 	 */
 	protected function prep_file_download( string $file_path, string $file_name ) : void {
-		U\Env::prep_for_file_download();
+		U\HTTP::prep_for_file_download();
 
-		header( 'Content-Description: File Transfer' );
-		header( 'Content-Type: ' . WPG\File::mime_type( $file_path, 'application/force-download' ) );
-		header( 'Content-Disposition: attachment; filename="' . str_replace( '"', '', $file_name ) . '";' );
+		header( 'content-description: File Transfer' );
+		header( 'content-type: ' . U\File::mime_type( $file_path, 'application/force-download' ) );
+		header( 'content-disposition: attachment; filename="' . str_replace( '"', '', $file_name ) . '";' );
 
 		if ( $file_size = filesize( $file_path ) ) {
-			header( 'Content-Length: ' . $file_size );
+			header( 'content-length: ' . $file_size );
 		}
 	}
 }
