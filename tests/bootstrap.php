@@ -33,4 +33,4 @@ namespace WP_Groove\LiteSpeed_Downloads_For_WooCommerce\Tests;
  *
  * @since 2022-02-21
  */
-( require __DIR__ . '/vendor/clevercanyon/wpgroove-framework/tests/bootstrap-closure.php' )( __FILE__, 'plugin' );
+( require dirname( __FILE__, 2 ) . '/vendor/clevercanyon/wpgroove-framework/tests/bootstrap-closure.php' )( __FILE__, 'plugin' );
