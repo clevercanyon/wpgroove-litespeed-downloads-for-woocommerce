@@ -34,6 +34,8 @@
  *
  * Text Domain: wpgroove-litespeed-downloads-for-woocommerce
  * Domain Path: /languages
+ *
+ * Update URI: https://wpgroove.com/product/litespeed-downloads-for-woocommerce/update
  */
 
 /**

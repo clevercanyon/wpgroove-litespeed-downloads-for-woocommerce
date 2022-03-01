@@ -46,7 +46,7 @@ use WP_Groove\{LiteSpeed_Downloads_For_WooCommerce as WP};
  *
  * @since 2021-12-15
  */
-class Plugin extends WPG\A6t\Plugin {
+final class Plugin extends WPG\A6t\Plugin {
 	/**
 	 * On `init` hook.
 	 *
