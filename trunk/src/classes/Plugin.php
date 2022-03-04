@@ -93,18 +93,22 @@ final class Plugin extends WPG\A6t\Plugin {
 		}
 		$parsed_file_path = \WC_Download_Handler::parse_file_path( $file_path );
 
-		if ( $parsed_file_path[ 'remote_file' ] || ! is_file( $parsed_file_path[ 'file_path' ] ) ) {
+		if ( ! empty( $parsed_file_path[ 'remote_file' ] ) ) {
 			return; // Not possible. Pass back to WooCommerce core.
 		}
-		$file_path = U\Fs::realize( $parsed_file_path[ 'file_path' ] );
-
-		wc_get_logger()->debug(
-			sprintf(
-			/* translators: %1$s contains the filepath of the digital asset. */
-				__( '%1$s is being served using the X-LiteSpeed-Location methodology.' ),
-				$file_path
-			)
-		);
+		if ( empty( $parsed_file_path[ 'file_path' ] )
+			|| ! is_file( $parsed_file_path[ 'file_path' ] )
+			|| ! U\Fs::realize( $parsed_file_path[ 'file_path' ] )
+		) {
+			wc_get_logger()->warning(
+				sprintf(
+				/* translators: %1$s contains the filepath of the digital asset. */
+					__( '%1$s could not be served using the X-LiteSpeed-Location method. Failed to parse `file_path`. Passing back to WooCommerce core.' ),
+					$file_path
+				)
+			);
+			return; // Not possible. Pass back to WooCommerce core.
+		}
 		$this->do_litespeed_download( $file_path, $file_name, $parsed_file_path );
 	}
 
@@ -118,12 +122,21 @@ final class Plugin extends WPG\A6t\Plugin {
 	 * @param array  $parsed_file_path Parsed file path.
 	 */
 	protected function do_litespeed_download( string $file_path, string $file_name, array $parsed_file_path ) /* : never */ : void {
-		$this->prep_file_download( $file_path, $file_name );
-
 		$file_path             = U\Fs::realize( $file_path );
 		$x_litespeed_base_path = U\Fs::realize( U\Env::var( 'DOCUMENT_ROOT' ) ?: ABSPATH );
+		$x_litespeed_subpath   = U\Dir::subpath( $x_litespeed_base_path, $file_path, false );
 
-		$x_litespeed_location = '/' . U\Dir::subpath( $x_litespeed_base_path, $file_path );
+		if ( ! $file_path || ! $x_litespeed_base_path || ! $x_litespeed_subpath ) {
+			wc_get_logger()->warning(
+				sprintf(
+				/* translators: %1$s contains the filepath of the digital asset. */
+					__( '%1$s could not be served using the X-LiteSpeed-Location method. Failed to acquire `x_litespeed_subpath`. Passing back to WooCommerce core.' ),
+					$file_path
+				)
+			);
+			return; // Not possible. Pass back to WooCommerce core.
+		}
+		$x_litespeed_location = '/' . $x_litespeed_subpath;
 		$x_litespeed_location = $this->apply_filters(
 			'download_file_x_litespeed_location',
 			$x_litespeed_location,
@@ -131,6 +144,14 @@ final class Plugin extends WPG\A6t\Plugin {
 			$file_name,
 			$parsed_file_path,
 		);
+		wc_get_logger()->debug(
+			sprintf(
+			/* translators: %1$s contains the filepath of the digital asset. */
+				__( '%1$s is being served using the X-LiteSpeed-Location methodology.' ),
+				$file_path
+			)
+		);
+		$this->prep_file_download( $file_path, $file_name );
 		header( 'x-litespeed-location: ' . $x_litespeed_location );
 		exit; // Stop here.
 	}
