@@ -40,6 +40,9 @@
 						"namespace_crux" : "WP_Groove\\LiteSpeed_Downloads_For_WooCommerce",
 						"name"           : "LiteSpeed Downloads for WooCommerce"
 					}
+				},
+				"webpack" : {
+					"assetDirs" : [ "../../../trunk/src/assets" ]
 				}
 			}
 		}
