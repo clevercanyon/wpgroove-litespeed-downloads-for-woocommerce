@@ -48,19 +48,30 @@ use WP_Groove\{LiteSpeed_Downloads_For_WooCommerce as WP};
  */
 final class Plugin extends WPG\A6t\Plugin {
 	/**
-	 * On `init` hook.
+	 * Should setup hooks?
+	 *
+	 * @since 2021-12-15
+	 *
+	 * @return bool Should setup hooks?
+	 */
+	protected function should_setup_hooks() : bool {
+		return parent::should_setup_hooks() && U\Env::is_litespeed();
+	}
+
+	/**
+	 * Does hook setup on instantiation.
 	 *
 	 * @since 2021-12-15
 	 */
-	public function on_init() : void {
-		parent::on_init();
+	protected function setup_hooks() : void {
+		parent::setup_hooks();
 
 		// Right before WooCommerce fires: <https://git.io/JMmrj>.
 		add_action( 'woocommerce_download_file_xsendfile', [ $this, 'on_woocommerce_download_file_xsendfile' ], 9, 2 );
 	}
 
 	/**
-	 * On `woocommerce_download_file_xsendfile` hook.
+	 * Runs on `woocommerce_download_file_xsendfile` hook.
 	 *
 	 * @since 2021-12-15
 	 *
