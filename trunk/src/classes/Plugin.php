@@ -180,7 +180,7 @@ final class Plugin extends WPG\A6t\Plugin {
 
 		header( 'content-description: File Transfer' );
 		header( 'content-type: ' . U\File::mime_type( $file_path, 'application/force-download' ) );
-		header( 'content-disposition: attachment; filename="' . str_replace( '"', '', $file_name ) . '";' );
+		header( 'content-disposition: ' . U\File::content_disposition( [ 'attachment' => true, 'file_name' => $file_name ] ) );
 
 		if ( $file_size = filesize( $file_path ) ) {
 			header( 'content-length: ' . $file_size );
