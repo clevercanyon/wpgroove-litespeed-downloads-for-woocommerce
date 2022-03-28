@@ -35,7 +35,7 @@
  * Text Domain: wpgroove-litespeed-downloads-for-woocommerce
  * Domain Path: /languages
  *
- * Update URI: https://wpgroove.com/product/litespeed-downloads-for-woocommerce/update
+ * [x] Update URI: https://wpgroove.com/wp-json/c24s/v1/product/litespeed-downloads-for-woocommerce/wp-update
  */
 
 /**
@@ -92,7 +92,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 WP\Plugin::add_instance_hooks(
 	__FILE__,
-	'LiteSpeed Downloads for WooCommerce', // @name
+	'LiteSpeed Downloads for WooCommerce',          // @name
 	'wpgroove-litespeed-downloads-for-woocommerce', // @slug
-	'1.0.0' // @version
+	'1.0.0'                                         // @version
 );
