@@ -92,7 +92,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 WP\Plugin::add_instance_hooks(
 	__FILE__,
-	'LiteSpeed Downloads for WooCommerce',          // @name
+	'LiteSpeed Downloads for WooCommerce', // @name
 	'wpgroove-litespeed-downloads-for-woocommerce', // @slug
-	'1.0.0'                                         // @version
+	'1.0.0' // @version
 );
