@@ -22,7 +22,7 @@
  *
  * Requires PHP: 7.4
  * Requires at least: 5.8.2
- * Tested up to: 5.8.2
+ * Tested up to: 5.9.2
  *
  * Author: WP Groove
  * Author URI: https://wpgroove.com
